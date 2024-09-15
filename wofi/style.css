@@ -14,7 +14,7 @@ window {
     font-size: 14pt;
     padding: 15px;
     border-radius: 5px;
-    background-color: rgba(50, 50, 50, 0.5); 
+    background-color: rgba(30, 30, 30, 0.5); 
     color: white;
 }
 
@@ -26,7 +26,7 @@ window {
 #outer-box {
     margin: 2px;
     padding: 10px;
-    background-color: rgba(50, 50, 50, 0.5);
+    background-color: rgba(50, 50, 50, 0.7);
     border-radius: 5px;
     border: rgba(153, 153, 153, .85) 3px solid;
 }
@@ -34,7 +34,7 @@ window {
 #scroll {
     margin: 5px;
     border-radius: 5px;
-    /* background-color: rgba(50, 50, 50, 0.5); */
+    background-color: rgba(30, 30, 30, 0.5);
 }
 
 #text {
@@ -44,21 +44,16 @@ window {
 
 #entry {
     padding: 10px;
-    margin: 10px;
+    margin: 0px;
     border-radius: 5px;
 }
-
-/* #entry:nth-child(even){
-    background-color: (50, 50, 50, 0.5);
-} */
 
 #entry:selected {
     all: unset;
     padding: 10px;
-    margin: 10px;
-    background-color: rgba(150, 150, 150, 0.5);
+    margin: 0px;
     border-radius: 5px;
-    background-color: (50, 50, 50, 0.5);
+    background-color: rgba(30, 30, 30, 0.5);
 }
 
 #text:selected {
