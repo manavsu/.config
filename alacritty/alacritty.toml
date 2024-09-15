@@ -9,7 +9,7 @@ WINIT_X11_SCALE_FACTOR = "1"
 dynamic_padding = true
 decorations = "full"
 title = "Alacritty@CachyOS"
-opacity = 0.5
+opacity = 0.6
 # opacity = 0.9 #default
 decorations_theme_variant = "Dark"
 
@@ -34,8 +34,7 @@ draw_bold_text_with_bright_colors = true
 foreground = "0xFFFFFF"
 
 [colors.normal]
-#black = "0x3B4252" #default
-black = "0x0C162A"
+black = "0x3B4252"
 red = "0xBF616A"
 green = "0xA3BE8C"
 yellow = "0xEBCB8B"
@@ -46,8 +45,7 @@ white = "0xE5E9F0"
 
 
 [colors.bright]
-#black = "0x4C566A" #default
-black = "0x1C2438"
+black = "0x4C566A"
 red = "0xBF616A"
 green = "0xA3BE8C"
 yellow = "0xEBCB8B"
