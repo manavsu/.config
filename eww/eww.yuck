@@ -1,9 +1,9 @@
 
 (defpoll time :interval "1s" "date '+%I:%M %p'")
 
-(defpoll memory_p :interval "1s" "scripts/sys_info --mem")
-(defpoll cpu_p :interval "1s" "scripts/sys_info --cpu")
-(defpoll storage_p :interval "1s" "scripts/sys_info --store")
+(defpoll memory_p :interval "1s" "bash scripts/sys_info --mem")
+(defpoll cpu_p :interval "1s" "bash scripts/sys_info --cpu")
+(defpoll storage_p :interval "1s" "bash scripts/sys_info --store")
 
 (defwindow dashboard
     :monitor 0
@@ -15,12 +15,18 @@
     :stacking "fg"
     :wm-ignore false
     :windowtype "desktop"
-    (box :orientation "horizontal"
-        (clock)
-        (power-button)
-        (mem_cpu_storage_scale)
-        (pavucontrol)
-        (close)
+    (box :orientation "h"
+                (box :orientation "v"
+                        (clock)
+                )
+                (box :orientation "v"
+                        (mem_cpu_storage_scale)
+                        (pavucontrol)
+                )
+                (box :orientation "v"
+                        (close)
+                        (power-button)
+                )
         )
 )
 
@@ -31,16 +37,8 @@
         )
 )
 
-(defwidget greeter []
-        "Hello, world2d2!"
-)
-
 (defwidget clock []
         time
-)
-
-(defwidget power []
-        ""  
 )
 
 (defwidget close []
@@ -54,15 +52,24 @@
         (button 
                 :onclick "eww close dashboard && sleep .1 && wlogout &"
                 :class "power-button"
-                (power)
+                ""
         )
 )
 
 
 (defwidget mem_cpu_storage_scale []
-        (box :orientation "vertical"
-                (scale :min 0 :max 100 :value memory_p :active false)
-                (scale :min 0 :max 100 :value cpu_p :active false)
-                (scale :min 0 :max 100 :value storage_p :active false)
+        (box :orientation "v"
+                (box :orientation "h"
+                        ""
+                        (scale :min 0 :max 100 :value memory_p :active false)
+                )
+                (box :orientation "h"
+                        ""
+                        (scale :min 0 :max 100 :value cpu_p :active false)
+                )
+                (box :orientation "h"
+                        ""
+                        (scale :min 0 :max 100 :value storage_p :active false)
+                )
         )
 )
