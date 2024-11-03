@@ -1,0 +1,47 @@
+#!/bin/bash
+
+
+PREV_TOTAL=0
+PREV_IDLE=0
+CPU_STAT_CACHE="/tmp/.eww_cpu_usage"
+PROC_STAT_PATH="/proc/stat"
+
+get_cpu_usage() {
+  if [[ -f "${CPU_STAT_CACHE}" ]]; then
+    read -r PREV_TOTAL PREV_IDLE < "${CPU_STAT_CACHE}"
+  fi
+
+  read -r _ user nice system idle iowait irq softirq steal guest guest_nice < <(grep '^cpu ' "${PROC_STAT_PATH}")
+  TOTAL=$((user + nice + system + idle + iowait + irq + softirq + steal + guest + guest_nice))
+  IDLE=$((idle + iowait))
+
+  if [[ -n "${PREV_TOTAL}" && -n "${PREV_IDLE}" ]]; then
+    DIFF_TOTAL=$((TOTAL - PREV_TOTAL))
+    DIFF_IDLE=$((IDLE - PREV_IDLE))
+    DIFF_USAGE=$((100 * (DIFF_TOTAL - DIFF_IDLE) / DIFF_TOTAL))
+
+    echo "${DIFF_USAGE}"
+  else
+    echo "?"
+  fi
+
+  echo "${TOTAL} ${IDLE}" > "${CPU_STAT_CACHE}"
+}
+
+get_mem() {
+  free -g | awk '/^Mem:/ {printf("%.2f", ($3/$2) * 100)}'
+}
+
+get_storage() {
+  df --total -h | awk '/^total/ {gsub("%", "", $5); print $5}'
+}
+# free -g | awk '/^Mem:/ {print $3 \" / \" $2 \" GB\"}'
+
+
+if [[ "$1" == "--cpu" ]]; then
+	get_cpu_usage
+elif [[ "$1" == "--mem" ]]; then
+	get_mem
+elif [[ "$1" == "--store" ]]; then
+  get_storage
+fi
