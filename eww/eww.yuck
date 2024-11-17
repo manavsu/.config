@@ -8,22 +8,19 @@
 (defwindow dashboard
     :monitor 0
     :geometry (geometry :x "0%"
-                        :y "0%"
-                        :width "50%"
-                        :height "50%"
-                        :anchor "center")
+                        :y "15%"
+                        :width "20%"
+                        :height "10%"
+                        :anchor "top center")
     :stacking "fg"
     :wm-ignore false
     :windowtype "desktop"
-    (box :orientation "h"
-                (box :orientation "v"
+        (box :orientation "V" :class "outer"
+                (box :orientation "H"
                         (clock)
                 )
-                (box :orientation "v"
-                        (mem_cpu_storage_scale)
+                (box :orientation "H" 
                         (pavucontrol)
-                )
-                (box :orientation "v"
                         (close)
                         (power-button)
                 )
@@ -31,45 +28,18 @@
 )
 
 (defwidget pavucontrol []
-        (button
-                :onclick "pavucontrol"
-                ""
-        )
+        (button :class "section button" :onclick "pavucontrol &" "")
 )
 
 (defwidget clock []
-        time
+        (label :class "section clock" :text time)
+
 )
 
 (defwidget close []
-        (button 
-                :onclick "eww close dashboard"
-                ""
-        )
+        (button :class "section button" :onclick "eww close dashboard && pkill wofi" "")
 )
 
 (defwidget power-button []
-        (button 
-                :onclick "eww close dashboard && sleep .1 && wlogout &"
-                :class "power-button"
-                ""
-        )
-)
-
-
-(defwidget mem_cpu_storage_scale []
-        (box :orientation "v"
-                (box :orientation "h"
-                        ""
-                        (scale :min 0 :max 100 :value memory_p :active false)
-                )
-                (box :orientation "h"
-                        ""
-                        (scale :min 0 :max 100 :value cpu_p :active false)
-                )
-                (box :orientation "h"
-                        ""
-                        (scale :min 0 :max 100 :value storage_p :active false)
-                )
-        )
+        (button :class "section button" :onclick "eww close dashboard && sleep .1 && wlogout &" "")
 )

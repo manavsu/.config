@@ -1,0 +1,26 @@
+
+*{
+	all: unset;
+    font-family: "Hack", monospace;
+    font-size: 15pt;
+}
+
+.outer {
+    background-color: rgba(50, 50, 50, 0.7);
+    border-radius: 5px;
+    border: rgba(153, 153, 153, .85) 3px solid;
+}
+
+.section {
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: rgba(30, 30, 30, 0.5);
+}
+
+
+.clock {
+    font-size: 25pt;
+}
