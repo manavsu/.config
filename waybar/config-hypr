@@ -86,7 +86,7 @@
         "timezone": "America/Los_Angeles"
     },
     "clock#3": {
-        "format": " {:%I:%M %p}",
+        "format": "{:%I:%M %p}",
         "tooltip": false,
         "on-click": "gsimplecal",
         "timezone": "America/Los_Angeles"
