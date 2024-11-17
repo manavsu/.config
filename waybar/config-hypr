@@ -24,17 +24,17 @@
         //"mpd"
         // "custom/media"
     ],
-    "modules-center": [
-        // "hyprland/window",
-        "clock#3"
-        // "clock#1",
-        // "clock#2"
-        // "custom/weather"
-        // "custom/gammastep"
-    ],
+    // "modules-center": [
+    //     // "hyprland/window",
+    //     // "clock#3"
+    //     // "clock#1",
+    //     // "clock#2"
+    //     // "custom/weather"
+    //     // "custom/gammastep"
+    // ],
     "modules-right": [
         // "backlight",
-        "network",
+        // "network",
         "custom/storage",
         "memory",
         "cpu",

@@ -1,7 +1,7 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 11pt;
+  font-size: 1pt;
   font-weight: 900;
   margin: 0;
   padding: 0;
@@ -38,8 +38,8 @@ window#waybar.hidden {
 #workspaces button {
   /* padding: 1px; */
   color: #7984a4;
-  background-color: transparent;
-  padding: 0px 2px 3px 2px;
+  background-color: #7984a4;
+  padding: 0px 2px 0px 2px;
   /* Use box-shadow instead of border so the text isn't offset */
   /* box-shadow: inset 0 -3px transparent; */
   /* Avoid rounded borders under each workspace name */
@@ -49,6 +49,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
   color: #ffffff;
+  background-color: #ffffff;
 }
 
 #workspaces button.urgent {
@@ -81,7 +82,7 @@ window#waybar.hidden {
 #mpd,
 #bluetooth,
 #custom-hyprPicker,
-#custom-power-menu,
+#custom-power,
 #custom-spotify,
 #custom-weather,
 #custom-weather.severe,
@@ -96,10 +97,10 @@ window#waybar.hidden {
 #custom-storage,
 #custom-weather.default {
   padding: 0px 15px;
-  color: #e5e5e5;
   /* color: #bf616a; */
+  color: transparent;
   border-radius: 20px;
-  /* background-color: #1e1e1e; */
+  background-color: #7984a4;
 }
 
 #window,
@@ -110,58 +111,18 @@ window#waybar.hidden {
 }
 
 #cpu {
-  color: #fb958b;
+  background-color: #fb958b;
+  color: transparent;
   /* background-color: #1e1e1e; */
 }
 
 #memory {
-  color: #ebcb8b;
+  background-color: #ebcb8b;
   /* background-color: #1e1e1e; */
 }
 
-#custom-power-menu {
-  border-radius: 9.5px;
+#custom-power {
   background-color: #1b242b;
-  border-radius: 7.5px;
-  padding: 0 0px;
-}
-
-#custom-launcher {
-  background-color: #1b242b;
-  color: #6a92d7;
-  border-radius: 7.5px;
-  padding: 0 0px;
-}
-
-#custom-weather.severe {
-  color: #eb937d;
-}
-
-#custom-weather.sunnyDay {
-  color: #c2ca76;
-}
-
-#custom-weather.clearNight {
-  color: #cad3f5;
-}
-
-#custom-weather.cloudyFoggyDay,
-#custom-weather.cloudyFoggyNight {
-  color: #c2ddda;
-}
-
-#custom-weather.rainyDay,
-#custom-weather.rainyNight {
-  color: #5aaca5;
-}
-
-#custom-weather.showyIcyDay,
-#custom-weather.snowyIcyNight {
-  color: #d6e7e5;
-}
-
-#custom-weather.default {
-  color: #dbd9d8;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -175,7 +136,7 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-  color: #7d9bba;
+  background-color: #7d9bba;
 }
 
 #backlight {
@@ -233,11 +194,11 @@ label:focus {
 }
 
 #network {
-  color: #b48ead;
+  background-color: #b48ead;
 }
 
 #network.disconnected {
-  color: #f53c3c;
+  background-color: #f53c3c;
 }
 
 #custom-media {
