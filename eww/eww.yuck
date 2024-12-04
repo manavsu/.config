@@ -27,13 +27,12 @@
         )
 )
 
-(defwidget pavucontrol []
-        (button :class "section button" :onclick "pavucontrol &" "")
-)
-
 (defwidget clock []
         (label :class "section clock" :text time)
+)
 
+(defwidget pavucontrol []
+        (button :class "section button" :onclick "eww close dashboard && pkill wofi && pavucontrol &" "")
 )
 
 (defwidget close []
@@ -41,5 +40,5 @@
 )
 
 (defwidget power-button []
-        (button :class "section button" :onclick "eww close dashboard && sleep .1 && wlogout &" "")
+        (button :class "section button" :onclick "eww close dashboard && pkill wofi && sleep .1 && wlogout &" "")
 )

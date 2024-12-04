@@ -1,7 +1,7 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 1pt;
+  font-size: .1pt;
   font-weight: 900;
   margin: 0;
   padding: 0;
@@ -83,6 +83,7 @@ window#waybar.hidden {
 #bluetooth,
 #custom-hyprPicker,
 #custom-power,
+#custom-clock,
 #custom-spotify,
 #custom-weather,
 #custom-weather.severe,
@@ -106,8 +107,12 @@ window#waybar.hidden {
 #window,
 #workspaces {
   border-radius: 20px;
-  padding: 0px 10px;
+  padding: 0px 0px;
   background-color: transparent;
+}
+
+#custom-clock {
+  background-color: #7d9bba;
 }
 
 #cpu {
