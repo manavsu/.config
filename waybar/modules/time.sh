@@ -3,26 +3,28 @@
 hour=$(date +%-I)
 min=$(date +%-M)
 
-# Hour blocks
+
 hour_blocks=""
 for ((i=1; i<=hour/3; i++)); do
-    hour_blocks+=" ━━━━━━━━━━"
+    hour_blocks+="  ━━━━━━━━━━"
 done
 for ((i=1; i<=hour%3; i++)); do
-    hour_blocks+=" ━━━"
+    hour_blocks+="  ━━━"
 done
 
-# Minute blocks
 min_blocks=""
 for ((i=1; i<=min/10; i++)); do
-    min_blocks+="━━━━━━ "
+    min_blocks+="━━━━━ "
 done
+
 for ((i=1; i<=min%10/5; i++)); do
-    min_blocks+="━━ "
+    min_blocks+="━ "
 done
+
 for ((i=1; i<=min%5; i++)); do
     min_blocks+="╴"
 done
+min_blocks+="  "
 
 hour_length=${#hour_blocks}
 min_length=${#min_blocks}
