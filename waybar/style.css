@@ -111,8 +111,12 @@ window#waybar.hidden {
   background-color: transparent;
 }
 
-#custom-clock {
-  background-color: #7d9bba;
+#custom-time {
+  margin: -20px;
+  padding: 2px 0px 0px 0px;
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 14px;
 }
 
 #cpu {
