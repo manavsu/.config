@@ -3,7 +3,6 @@
 hour=$(date +%-I)
 min=$(date +%-M)
 
-
 hour_blocks=""
 for ((i=1; i<=hour/3; i++)); do
     hour_blocks+="  ━━━━━━━━━━"
