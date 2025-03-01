@@ -1,61 +1,42 @@
 * {
     font-family: "Hack", monospace;
     font-size: 12pt;
-    font-weight: 900;
 }
 
 window {
-    background-color: transparent;
+    background-color: rgba(20, 20, 20, 1); 
 }
 
 #input {
     all: unset;
     margin: 5px;
-    font-size: 14pt;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: rgba(10, 10, 10, 0.5); 
-    color: white;
-}
-
-#inner-box {
-    background-color: transparent;
+    padding: 10px;
     border-radius: 5px;
 }
 
 #outer-box {
-    margin: 2px;
     padding: 10px;
-    background-color: rgba(20, 20, 20, 1);
     border-radius: 5px;
     border: rgba(51, 51, 51, 1) 1px solid;
 }
 
 #scroll {
     margin: 5px;
-    border-radius: 5px;
-    background-color: rgba(10, 10, 10, 0.5);
 }
 
 #text {
     padding: 4px;
+}
+/* #entry {
     color: white;
-}
-
-#entry {
-    padding: 10px;
-    margin: 0px;
-    border-radius: 5px;
-}
+} */
 
 #entry:selected {
     all: unset;
-    padding: 10px;
-    margin: 0px;
-    border-radius: 5px;
     background-color: rgba(10, 10, 10, 0.5);
 }
 
 #text:selected {
     background: transparent;
+    color: rgba(131, 171, 198, 1);
 }
