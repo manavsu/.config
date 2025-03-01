@@ -30,3 +30,15 @@ btop++ needs an interactive shell to run.
 
 2025/01/07 (15:32:15) | ===> btop++ v.1.4.0
 2025/01/07 (15:32:15) | ERROR: Exception during Config::unlock() : unordered_map::at
+
+2025/02/06 (21:54:01) | ===> btop++ v.1.4.0
+2025/02/06 (21:54:01) | WARNING: Failed to join _runner thread on exit!
+
+2025/02/13 (11:48:36) | ===> btop++ v.1.4.0
+2025/02/13 (11:48:36) | ERROR: Exception during Config::unlock() : unordered_map::at
+
+2025/02/26 (19:11:39) | ===> btop++ v.1.4.0
+2025/02/26 (19:11:39) | ERROR: Exception during Config::unlock() : unordered_map::at
+
+2025/03/01 (09:49:21) | ===> btop++ v.1.4.0
+2025/03/01 (09:49:21) | ERROR: Exception during Config::unlock() : unordered_map::at
