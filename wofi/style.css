@@ -1,10 +1,11 @@
 * {
-    font-family: "Hack", monospace;
+    font-family: "Fira Sans", monospace;
     font-size: 12pt;
 }
 
 window {
-    background-color: rgba(20, 20, 20, 1); 
+    background-color: rgba(20, 20, 20, .9); 
+    border: none;
 }
 
 #input {
@@ -24,15 +25,15 @@ window {
     margin: 5px;
 }
 
-#text {
+/* #text {
     padding: 4px;
-}
+} */
 /* #entry {
     color: white;
 } */
 
 #entry:selected {
-    all: unset;
+    outline: none;
     background-color: rgba(10, 10, 10, 0.5);
 }
 
