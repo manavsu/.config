@@ -9,5 +9,6 @@
 !hypr/scripts/screenshot
 !hypr
 !alacritty
+!alacritty/colors.toml
 !btop
 !wlogout
