@@ -10,6 +10,6 @@
 !hypr
 !alacritty
 !alacritty/colors.toml
-!btop
+!btop/btop.conf
 !wlogout
 !code-flags.conf
