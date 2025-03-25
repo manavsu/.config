@@ -6,7 +6,7 @@
 !wofi
 !waybar
 !waybar/modules
-!code-flags.conf
+!hypr/scripts/screenshot
 !hypr
 !alacritty
 !btop
