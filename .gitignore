@@ -8,6 +8,7 @@
 !waybar/modules
 !hypr/scripts/screenshot
 !hypr/*
+!hypr
 !alacritty
 !alacritty/colors.toml
 !btop/btop.conf
