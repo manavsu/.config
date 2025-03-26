@@ -13,3 +13,5 @@
 !btop/btop.conf
 !wlogout
 !code-flags.conf
+!nvim
+!nvim/**
