@@ -3,7 +3,10 @@ return {
   opts = {
     picker = {
       sources = {
-        explorer = { layout = { layout = { position = "right" } } },
+        explorer = {
+          layout = { layout = { position = "right" } },
+          auto_close = "true",
+        },
       },
     },
   },
