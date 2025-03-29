@@ -17,3 +17,5 @@
 !code-flags.conf
 !nvim
 !nvim/**
+!fish
+!fish/**
