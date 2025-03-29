@@ -12,7 +12,6 @@
 !hypr
 !alacritty
 !alacritty/colors.toml
-!btop/btop.conf
 !wlogout
 !code-flags.conf
 !nvim
@@ -21,3 +20,7 @@
 !fish/**
 !mako
 !mako/**
+!btop
+!btop/btop.conf
+!btop/themes
+!btop/themes/**

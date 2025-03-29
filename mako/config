@@ -1,2 +1,5 @@
-# font = "monospace 12"
-# background-color = "#121212"
+font=monospace 12
+background-color=#89B4FAE8
+border-size=0
+border-radius=4
+text-color=#121212FF
