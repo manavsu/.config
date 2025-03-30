@@ -11,7 +11,7 @@
 !hypr/*
 !hypr
 !alacritty
-!alacritty/colors.toml
+!alacritty/**
 !wlogout
 !code-flags.conf
 !nvim
