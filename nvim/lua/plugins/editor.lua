@@ -1,7 +1,16 @@
 return {
-  { "pocco81/auto-save.nvim" },
   {
-    "MeanderingProgrammer/render-markdown.nvim",
+    "pocco81/auto-save.nvim",
+    opts = {
+      execution_message = {
+        message = function()
+          return ""
+        end,
+      },
+    },
+  },
+  {
+    -"MeanderingProgrammer/render-markdown.nvim",
     opts = {
       heading = {
         icons = { "󰉫 ", "󰉬 ", "󰉭 ", "󰉮 ", "󰉯 ", "󰉰 " },
@@ -13,5 +22,6 @@ return {
         enabled = true,
       },
     },
+    ft = { "markdown", "norg", "rmg", "org", "codecompanion", "copilot-chat" },
   },
 }
