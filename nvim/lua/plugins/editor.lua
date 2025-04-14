@@ -1,16 +1,9 @@
 return {
   {
     "pocco81/auto-save.nvim",
-    opts = {
-      execution_message = {
-        message = function()
-          return ""
-        end,
-      },
-    },
   },
   {
-    -"MeanderingProgrammer/render-markdown.nvim",
+    "MeanderingProgrammer/render-markdown.nvim",
     opts = {
       heading = {
         icons = { "󰉫 ", "󰉬 ", "󰉭 ", "󰉮 ", "󰉯 ", "󰉰 " },
