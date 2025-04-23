@@ -16,6 +16,7 @@
 !code-flags.conf
 !nvim
 !nvim/**
+nvim/lazy-lock.json
 !fish
 !fish/**
 !mako
@@ -24,4 +25,5 @@
 !btop/btop.conf
 !btop/themes
 !btop/themes/**
-nvim/lazy-lock.json
+!fastfetch
+!fastfetch/**
