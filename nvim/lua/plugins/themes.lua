@@ -17,9 +17,7 @@ return {
   {
     "catppuccin",
     lazy = true,
-    opts = {
-      transparent_background = true,
-    },
+    opts = { transparent_background = true },
   },
   {
     "cocopon/iceberg.vim",
@@ -30,8 +28,10 @@ return {
   },
   {
     "rose-pine/neovim",
-    opts = {
-      disable_background = true,
-    },
+    opts = { disable_background = true },
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    opts = { transparent = true },
   },
 }
