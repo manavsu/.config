@@ -2,7 +2,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "kanso-mist",
     },
   },
   {
@@ -19,6 +19,19 @@ return {
     lazy = true,
     opts = {
       transparent_background = true,
+    },
+  },
+  {
+    "cocopon/iceberg.vim",
+  },
+  {
+    "webhooked/kanso.nvim",
+    opts = { transparent = true },
+  },
+  {
+    "rose-pine/neovim",
+    opts = {
+      disable_background = true,
     },
   },
 }
