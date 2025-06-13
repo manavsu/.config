@@ -2,6 +2,12 @@ return {
   {
     "snacks.nvim",
     opts = {
+      terminal = {
+        win = {
+          position = "float",
+          border = "rounded",
+        },
+      },
       picker = {
         sources = {
           explorer = {

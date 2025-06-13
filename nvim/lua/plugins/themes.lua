@@ -2,7 +2,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanso-mist",
+      colorscheme = "kanso-zen",
     },
   },
   {
@@ -24,14 +24,18 @@ return {
   },
   {
     "webhooked/kanso.nvim",
-    opts = { transparent = true },
+    config = function()
+      require("kanso").setup({ transparent = true })
+    end,
   },
   {
     "rose-pine/neovim",
-    opts = { disable_background = true },
+    config = function()
+      require("rose-pine").setup({ disable_background = true })
+    end,
   },
   {
     "rebelot/kanagawa.nvim",
-    opts = { transparent = true },
+    opts = { disable_background = true },
   },
 }
